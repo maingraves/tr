@@ -79,7 +79,7 @@ class LeMondeController extends WidgetController {
 		let domstr = _atob(result.response.dom); // decode result
 		let parser = new DOMParser(); // init dom parser
 		let dom = parser.parseFromString(domstr, "text/html"); // inject result
-		let article = new xph().doc(dom).ctx(dom).craft('//*[@id="dictionary"]/div/div[1]/div[1]/div/div/div/div/div[1]/h3').firstResult; // find interesting things
+		let article = new xph().doc(dom).ctx(dom).craft('//*[@id="dictionary"]/div/div[1]/div[1]/div/div/div/div/div[1]').firstResult; // find interesting things
 		//this.mvc.view.update(article.textContent, article.getAttribute("href"));
 	}
 	
