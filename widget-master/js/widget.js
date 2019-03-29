@@ -79,4 +79,4 @@ class LeMondeController extends WidgetController {
 	}
 	
 	
-}
+
