@@ -50,9 +50,13 @@ class LeMondeView extends WidgetView {
 		//this.link = HH.create("a");
 		//SS.style(this.link, {"fontSize": "10px", "textDecoration": "none"});
 		//this.stage.appendChild(this.link);
-		this.texte = HH.create("h3");
-		this.texte.innerHTML = this.article;
-		this.stage.appendChild(this.texte);
+		this.bloc = HTML.create("input");
+		this.bloc.setAttribute("type", "text");
+		this.bloc.setAttribute("value", "Entrer un mot");
+		this.stage.appendChild(this.bloc);
+		//this.texte = HH.create("h3");
+		//this.texte.innerHTML = this.article;
+		//this.stage.appendChild(this.texte);
 		
 	}
 	
