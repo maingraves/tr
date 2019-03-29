@@ -50,7 +50,7 @@ class LeMondeView extends WidgetView {
 		//this.link = HH.create("a");
 		//SS.style(this.link, {"fontSize": "10px", "textDecoration": "none"});
 		//this.stage.appendChild(this.link);
-		this.texte = HH.create("a");
+		this.texte = HH.create("h3");
 		this.texte.innerHTML = this.article;
 		this.stage.appendChild(this.texte);
 		
@@ -79,7 +79,7 @@ class LeMondeController extends WidgetController {
 		let domstr = _atob(result.response.dom); // decode result
 		let parser = new DOMParser(); // init dom parser
 		let dom = parser.parseFromString(domstr, "text/html"); // inject result
-		let article = new xph().doc(dom).ctx(dom).craft('//*[@id="dictEntry10000724317"]').firstResult; // find interesting things
+		let article = new xph().doc(dom).ctx(dom).craft('//*[@id="dictionary"]/div/div[1]/div[1]/div/div/div/div/div[1]/h3').firstResult; // find interesting things
 		//this.mvc.view.update(article.textContent, article.getAttribute("href"));
 	}
 	
